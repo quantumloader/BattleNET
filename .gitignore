@@ -9,6 +9,13 @@ go/bin/
 *.test
 *.out
 
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+
 # User-specific files
 *.suo
 *.user
