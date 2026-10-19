@@ -7,16 +7,22 @@
     <LangVersion>latest</LangVersion>
     <RootNamespace>BattleNET</RootNamespace>
     <AssemblyName>BattleNET.Core</AssemblyName>
+    <PackageId>BattleNET.Core</PackageId>
     <Version>2.0.0</Version>
     <Authors>quantumloader</Authors>
+    <Company>quantumloader</Company>
+    <Copyright>Copyright (C) 2026 quantumloader</Copyright>
     <Description>Modern .NET BattlEye RCon protocol client.</Description>
     <PackageTags>battleye;rcon;arma;dayz;server</PackageTags>
     <PackageLicenseExpression>LGPL-3.0-or-later</PackageLicenseExpression>
     <RepositoryUrl>https://github.com/quantumloader/BattleNET</RepositoryUrl>
     <PackageProjectUrl>https://github.com/quantumloader/BattleNET</PackageProjectUrl>
+    <RepositoryType>git</RepositoryType>
+    <PublishRepositoryUrl>true</PublishRepositoryUrl>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <NoWarn>$(NoWarn);1591</NoWarn>
     <PackageReadmeFile>README.md</PackageReadmeFile>
+    <PackageReleaseNotes>v2.0.0 — Breaking rewrite for .NET 10. Async API, IAsyncDisposable, reliable UDP cleanup.</PackageReleaseNotes>
   </PropertyGroup>
 
   <ItemGroup>
