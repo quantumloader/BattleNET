@@ -19,6 +19,11 @@ Maintained by **[quantumloader](https://github.com/quantumloader)** — v2.0 is 
 
 - [.NET 10 SDK](https://dotnet.microsoft.com/download)
 
+## Download
+
+- **GitHub Releases:** https://github.com/quantumloader/BattleNET/releases/tag/v2.0.0  
+  (`BattleNET-2.0.0-win-x64.zip` + `.nupkg` files)
+
 ## Build
 
 ```bash
