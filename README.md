@@ -16,12 +16,9 @@ dotnet tool install -g BattleNET.Cli
 
 ## Documentation
 
-Full docs live in [`docs/`](docs/README.md):
+Full docs in [`docs/`](docs/README.md) — **EN · [RU](docs/ru/README.md) · [ZH](docs/zh-CN/README.md) · [DE](docs/de/README.md) · [FR](docs/fr/README.md) · [ES](docs/es/README.md) · [JA](docs/ja/README.md) · [PL](docs/pl/README.md)**
 
-- [Getting started](docs/getting-started.md)
-- [API reference](docs/api.md)
-- [CLI](docs/cli.md)
-- [Migration from 1.3.x](docs/migration-v2.md)
+- [Getting started](docs/getting-started.md) · [API](docs/api.md) · [CLI](docs/cli.md) · [Migration](docs/migration-v2.md)
 
 ## Projects
 

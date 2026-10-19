@@ -1,5 +1,16 @@
 # BattleNET documentation
 
+**Languages / Языки / 语言 / Sprachen**
+
+| | |
+|--|--|
+| [English](README.md) | [Русский](ru/README.md) |
+| [简体中文](zh-CN/README.md) | [Deutsch](de/README.md) |
+| [Français](fr/README.md) | [Español](es/README.md) |
+| [日本語](ja/README.md) | [Polski](pl/README.md) |
+
+## English
+
 | Document | Description |
 |----------|-------------|
 | [Getting started](getting-started.md) | Install, connect, send first command |
