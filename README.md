@@ -30,7 +30,9 @@ dotnet tool install -g BattleNET.Cli
 
 - **NuGet:** [BattleNET.Core](https://www.nuget.org/packages/BattleNET.Core) · [BattleNET.Commands](https://www.nuget.org/packages/BattleNET.Commands) · [BattleNET.Cli](https://www.nuget.org/packages/BattleNET.Cli)
 - **GitHub Releases:** https://github.com/quantumloader/BattleNET/releases/tag/v2.0.0  
-  (`BattleNET-2.0.0-win-x64.zip` + `.nupkg` files)
+  - `BattleNET.Libraries-2.0.0-net10.0.zip` — `BattleNET.Core` + `BattleNET.Commands` DLLs  
+  - `BattleNET-2.0.0-win-x64.zip` — CLI  
+  - `*.nupkg` — NuGet packages
 
 ## Build
 
