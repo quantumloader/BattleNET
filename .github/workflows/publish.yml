@@ -1,0 +1,44 @@
+name: Publish
+
+on:
+  release:
+    types: [published]
+  workflow_dispatch:
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    environment: production
+    permissions:
+      id-token: write
+      contents: read
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: "10.0.x"
+
+      - name: Pack
+        run: |
+          mkdir -p artifacts
+          dotnet pack BattleNET.Core/BattleNET.Core.csproj -c Release -o artifacts --nologo
+          dotnet pack BattleNET.Commands/BattleNET.Commands.csproj -c Release -o artifacts --nologo
+          dotnet pack BattleNET.Cli/BattleNET.Cli.csproj -c Release -o artifacts --nologo
+
+      - name: NuGet login (OIDC)
+        uses: NuGet/login@v1
+        id: login
+        with:
+          # nuget.org profile username (not email)
+          user: ${{ vars.NUGET_USER || 'quantumloader' }}
+
+      - name: Push to nuget.org
+        run: |
+          dotnet nuget push "artifacts/*.nupkg" \
+            --api-key "${{ steps.login.outputs.NUGET_API_KEY }}" \
+            --source https://api.nuget.org/v3/index.json \
+            --skip-duplicate
