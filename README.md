@@ -1,11 +1,18 @@
 # BattleNET
 
 [![.NET](https://img.shields.io/badge/.NET-10-512BD4)](https://dotnet.microsoft.com/)
+[![NuGet](https://img.shields.io/nuget/v/BattleNET.Core.svg)](https://www.nuget.org/packages/BattleNET.Core)
 [![License: LGPL v3](https://img.shields.io/badge/License-LGPL%20v3-blue.svg)](license.txt)
 
 Modern C# (.NET 10) library and CLI for the BattlEye RCon protocol (Arma / DayZ servers).
 
 Maintained by **[quantumloader](https://github.com/quantumloader)** — v2.0 is a breaking rewrite: async/`await`, `IAsyncDisposable`, typed commands, and proper UDP socket cleanup.
+
+```bash
+dotnet add package BattleNET.Core
+dotnet add package BattleNET.Commands
+dotnet tool install -g BattleNET.Cli
+```
 
 ## Projects
 
@@ -21,6 +28,7 @@ Maintained by **[quantumloader](https://github.com/quantumloader)** — v2.0 is 
 
 ## Download
 
+- **NuGet:** [BattleNET.Core](https://www.nuget.org/packages/BattleNET.Core) · [BattleNET.Commands](https://www.nuget.org/packages/BattleNET.Commands) · [BattleNET.Cli](https://www.nuget.org/packages/BattleNET.Cli)
 - **GitHub Releases:** https://github.com/quantumloader/BattleNET/releases/tag/v2.0.0  
   (`BattleNET-2.0.0-win-x64.zip` + `.nupkg` files)
 
