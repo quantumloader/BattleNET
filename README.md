@@ -24,9 +24,10 @@ Full docs in [`docs/`](docs/README.md) — **EN · [RU](docs/ru/README.md) · [Z
 
 | Project | Description |
 |---------|-------------|
-| `BattleNET.Core` | Protocol + `BattlEyeClient` |
-| `BattleNET.Commands` | Typed helpers + `players` / `bans` parsers |
-| `BattleNET.Cli` | Console client (`System.CommandLine`) |
+| `BattleNET.Core` | .NET protocol + `BattlEyeClient` |
+| `BattleNET.Commands` | .NET typed helpers + `players` / `bans` parsers |
+| `BattleNET.Cli` | .NET console client (`System.CommandLine`) |
+| [`go/`](go/) | **Go** port + CLI (`github.com/quantumloader/BattleNET/go`) |
 
 ## Requirements
 
@@ -75,7 +76,24 @@ var players = await client.GetPlayersAsync();
 await client.SayAllAsync("Hello from BattleNET v2");
 ```
 
-More examples: [docs/getting-started.md](docs/getting-started.md) · [docs/api.md](docs/api.md)
+More examples: [docs/getting-started.md](docs/getting-started.md) · [docs/api.md](docs/api.md) · [Go](go/README.md)
+
+## Go
+
+```bash
+cd go
+go test ./...
+go run ./cmd/battlenet --host 127.0.0.1 --port 2302 --password secret
+```
+
+```go
+import battlenet "github.com/quantumloader/BattleNET/go"
+
+client := battlenet.NewClient("127.0.0.1", 2302, "password", nil)
+defer client.Close()
+```
+
+Details: [go/README.md](go/README.md) · [docs/go.md](docs/go.md)
 
 ## Authors
 

@@ -3,6 +3,12 @@
 
 artifacts/
 
+# Go
+go/bin/
+*.exe
+*.test
+*.out
+
 # User-specific files
 *.suo
 *.user

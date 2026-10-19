@@ -1,3 +1,7 @@
+v2.1.0 (quantumloader)
+ * Add Go port under go/ (protocol, client, CLI)
+ * Module: github.com/quantumloader/BattleNET/go
+
 v2.0.1 (quantumloader)
  * Retarget to .NET 9 (net9.0) so Visual Studio 2022 can open the solution
  * .NET 10 SDK requires MSBuild 18 / VS 2026 — pinned SDK 9.0.x via global.json

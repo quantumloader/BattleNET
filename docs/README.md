@@ -17,6 +17,7 @@
 | [API reference](api.md) | `BattlEyeClient`, options, events, Commands helpers |
 | [CLI](cli.md) | Console client flags and interactive mode |
 | [Migration from 1.3.x](migration-v2.md) | Breaking changes in v2.0 |
+| [Go port](go.md) | Go module + CLI |
 
 Source: https://github.com/quantumloader/BattleNET  
 NuGet: [BattleNET.Core](https://www.nuget.org/packages/BattleNET.Core) · [BattleNET.Commands](https://www.nuget.org/packages/BattleNET.Commands) · [BattleNET.Cli](https://www.nuget.org/packages/BattleNET.Cli)
