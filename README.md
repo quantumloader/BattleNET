@@ -14,6 +14,15 @@ dotnet add package BattleNET.Commands
 dotnet tool install -g BattleNET.Cli
 ```
 
+## Documentation
+
+Full docs live in [`docs/`](docs/README.md):
+
+- [Getting started](docs/getting-started.md)
+- [API reference](docs/api.md)
+- [CLI](docs/cli.md)
+- [Migration from 1.3.x](docs/migration-v2.md)
+
 ## Projects
 
 | Project | Description |
@@ -40,49 +49,36 @@ dotnet tool install -g BattleNET.Cli
 dotnet build BattleNET.sln -c Release
 ```
 
-## CLI
+Open `BattleNET.sln` in Visual Studio 2022 (17.14+) / VS 2026, or in Cursor/VS Code (C# Dev Kit). Startup project: **BattleNET.Cli**.
+
+## Quick CLI
 
 ```bash
 dotnet run --project BattleNET.Cli -- --host 127.0.0.1 --port 2302 --password secret
 dotnet run --project BattleNET.Cli -- --host 127.0.0.1 --port 2302 --password secret --command "say -1 Hello"
 ```
 
-Interactive shortcuts: `/players`, `/bans`, `/history`. Type `exit` to quit (socket is always disposed).
+Interactive shortcuts: `/players`, `/bans`, `/history`. Type `exit` to quit.
 
-Optional: `--reconnect` enables automatic reconnect after connection loss.
-
-## Library usage
+## Quick library usage
 
 ```csharp
 using BattleNET;
 using BattleNET.Commands;
 
 var credentials = new BattlEyeCredentials("127.0.0.1", 2302, "password");
-var options = new BattlEyeClientOptions { ReconnectOnPacketLoss = true };
+await using var client = new BattlEyeClient(credentials);
 
-await using var client = new BattlEyeClient(credentials, options);
 client.MessageReceived += (_, e) => Console.WriteLine(e.Message);
 
-var result = await client.ConnectAsync();
-if (result != BattlEyeConnectionResult.Success)
+if (await client.ConnectAsync() != BattlEyeConnectionResult.Success)
     return;
 
 var players = await client.GetPlayersAsync();
 await client.SayAllAsync("Hello from BattleNET v2");
-await client.DisconnectAsync();
 ```
 
-Fire-and-forget command:
-
-```csharp
-byte seq = await client.SendCommandAsync("missions");
-```
-
-Wait for reply:
-
-```csharp
-string reply = await client.SendCommandAndWaitAsync("players");
-```
+More examples: [docs/getting-started.md](docs/getting-started.md) · [docs/api.md](docs/api.md)
 
 ## Authors
 
