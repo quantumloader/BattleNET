@@ -1,5 +1,7 @@
 v2.1.0 (quantumloader)
  * Add Go port under go/ (protocol, client, CLI)
+ * Add Python port under python/ (package + CLI)
+ * Add PowerShell module under powershell/
  * Module: github.com/quantumloader/BattleNET/go
 
 v2.0.1 (quantumloader)

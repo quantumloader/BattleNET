@@ -27,7 +27,9 @@ Full docs in [`docs/`](docs/README.md) — **EN · [RU](docs/ru/README.md) · [Z
 | `BattleNET.Core` | .NET protocol + `BattlEyeClient` |
 | `BattleNET.Commands` | .NET typed helpers + `players` / `bans` parsers |
 | `BattleNET.Cli` | .NET console client (`System.CommandLine`) |
-| [`go/`](go/) | **Go** port + CLI (`github.com/quantumloader/BattleNET/go`) |
+| [`go/`](go/) | **Go** port + CLI |
+| [`python/`](python/) | **Python** port + CLI |
+| [`powershell/`](powershell/) | **PowerShell** module + CLI script |
 
 ## Requirements
 
@@ -94,6 +96,24 @@ defer client.Close()
 ```
 
 Details: [go/README.md](go/README.md) · [docs/go.md](docs/go.md)
+
+## Python
+
+```bash
+cd python && pip install -e .
+battlenet --host 127.0.0.1 --port 2302 --password secret
+```
+
+Details: [python/README.md](python/README.md) · [docs/python.md](docs/python.md)
+
+## PowerShell
+
+```powershell
+Import-Module .\powershell\BattleNET\BattleNET.psd1
+.\powershell\BattleNET.Cli.ps1 -HostName 127.0.0.1 -Port 2302 -Password secret
+```
+
+Details: [powershell/README.md](powershell/README.md) · [docs/powershell.md](docs/powershell.md)
 
 ## Authors
 
