@@ -1,0 +1,13 @@
+{
+  "profiles": {
+    "BattleNET.Cli": {
+      "commandName": "Project",
+      "dotnetRunMessages": true
+    },
+    "BattleNET.Cli (example)": {
+      "commandName": "Project",
+      "commandLineArgs": "--host 127.0.0.1 --port 2302 --password change-me",
+      "dotnetRunMessages": true
+    }
+  }
+}
