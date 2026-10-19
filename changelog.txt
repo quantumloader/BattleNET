@@ -1,0 +1,53 @@
+v2.0.0 (quantumloader)
+ * Breaking rewrite targeting .NET 10
+ * Split into BattleNET.Core, BattleNET.Commands, BattleNET.Cli
+ * Async API: ConnectAsync, SendCommandAsync, SendCommandAndWaitAsync
+ * IAsyncDisposable / IDisposable with reliable UDP socket cleanup
+ * CancellationToken support, PeriodicTimer keep-alive, reconnect backoff
+ * Binary Span-based packet build/parse (removed hex/string CRC hacks)
+ * Typed commands + players/bans parsers
+ * Modern System.CommandLine CLI (one-shot + interactive)
+ * Removed obsolete enum members and .NET Framework 4.6.1 client
+
+v1.3.4
+ * Convert thread to async method (https://github.com/tym32167)
+ * Move to .NET Standard 2.0 (https://github.com/tym32167)
+ * Limit connection attempts to 100 to get rid of the stack overflow issue (https://github.com/tym32167)
+
+v1.3.3
+ * Improved command queuing system (Fixes #37)
+
+v1.3.2
+ * Fixed an issue with banlists (Thank you DomiStyle)
+ * Added "admins" command, which returns all connected RCon clients (Thank you maca134)
+
+v1.3.1
+ * Fixed an issue where the (first) command would be sent twice
+ * Fixed an issue where the library would lose connection after a long time, depending on server load (Thanks to EPM Cortez for finding the issue)
+
+v1.3
+ * Client now has DNS support
+ * BattlEyeLoginCredentials.Host changed from string to IPAddress
+ * Increased timeout check sleep a bit (1 second)
+ * Increased time before a packet gets resend (2 seconds)
+ * Proper UTF8 support
+ * The usual bugfixes and cleanups
+
+v1.2.1
+ * Increased max socket receive buffer (fixes long ban lists)
+
+v1.2
+ * Removed system messages (Connected, Disconnected, etc) from library
+ * Changed ReconnectOnPacketLoss and IsConnected to properties
+ * New connect event (success, invalid login, host unreachable)
+ * SendCommandPacket() now returns an identifier which can be used in message filtering
+ * Renamed SendCommandPacket() to SendCommand(), kinda...
+ * Bugfixes and cleanups
+
+v1.1
+ * Different method to construct packets
+ * Some fixes and cleanups
+ * Did licensing the right way
+
+v1.0
+ * Initial release

@@ -1,0 +1,5 @@
+quantumloader
+
+Original BattleNET authors:
+Marcel de Vries
+Robert van der Boorn
