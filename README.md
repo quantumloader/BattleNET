@@ -1,10 +1,10 @@
 # BattleNET
 
-[![.NET](https://img.shields.io/badge/.NET-10-512BD4)](https://dotnet.microsoft.com/)
+[![.NET](https://img.shields.io/badge/.NET-9-512BD4)](https://dotnet.microsoft.com/)
 [![NuGet](https://img.shields.io/nuget/v/BattleNET.Core.svg)](https://www.nuget.org/packages/BattleNET.Core)
 [![License: LGPL v3](https://img.shields.io/badge/License-LGPL%20v3-blue.svg)](license.txt)
 
-Modern C# (.NET 10) library and CLI for the BattlEye RCon protocol (Arma / DayZ servers).
+Modern C# (.NET 9) library and CLI for the BattlEye RCon protocol (Arma / DayZ servers).
 
 Maintained by **[quantumloader](https://github.com/quantumloader)** — v2.0 is a breaking rewrite: async/`await`, `IAsyncDisposable`, typed commands, and proper UDP socket cleanup.
 
@@ -33,14 +33,14 @@ Full docs live in [`docs/`](docs/README.md):
 
 ## Requirements
 
-- [.NET 10 SDK](https://dotnet.microsoft.com/download)
+- [.NET 9 SDK](https://dotnet.microsoft.com/download) (Visual Studio 2022 17.12+)
 
 ## Download
 
 - **NuGet:** [BattleNET.Core](https://www.nuget.org/packages/BattleNET.Core) · [BattleNET.Commands](https://www.nuget.org/packages/BattleNET.Commands) · [BattleNET.Cli](https://www.nuget.org/packages/BattleNET.Cli)
 - **GitHub Releases:** https://github.com/quantumloader/BattleNET/releases/tag/v2.0.0  
-  - `BattleNET.Libraries-2.0.0-net10.0.zip` — `BattleNET.Core` + `BattleNET.Commands` DLLs  
-  - `BattleNET-2.0.0-win-x64.zip` — CLI  
+  - `BattleNET.Libraries-*-net9.0.zip` — `BattleNET.Core` + `BattleNET.Commands` DLLs  
+  - `BattleNET-*-win-x64.zip` — CLI  
   - `*.nupkg` — NuGet packages
 
 ## Build
@@ -49,7 +49,7 @@ Full docs live in [`docs/`](docs/README.md):
 dotnet build BattleNET.sln -c Release
 ```
 
-Open `BattleNET.sln` in Visual Studio 2022 (17.14+) / VS 2026, or in Cursor/VS Code (C# Dev Kit). Startup project: **BattleNET.Cli**.
+Open `BattleNET.sln` in Visual Studio 2022 (17.12+) or Cursor/VS Code (C# Dev Kit). Set startup project to **BattleNET.Cli**.
 
 ## Quick CLI
 

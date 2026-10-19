@@ -1,5 +1,9 @@
+v2.0.1 (quantumloader)
+ * Retarget to .NET 9 (net9.0) so Visual Studio 2022 can open the solution
+ * .NET 10 SDK requires MSBuild 18 / VS 2026 — pinned SDK 9.0.x via global.json
+
 v2.0.0 (quantumloader)
- * Breaking rewrite targeting .NET 10
+ * Breaking rewrite (originally .NET 10; see 2.0.1 for VS 2022 TFM)
  * Split into BattleNET.Core, BattleNET.Commands, BattleNET.Cli
  * Async API: ConnectAsync, SendCommandAsync, SendCommandAndWaitAsync
  * IAsyncDisposable / IDisposable with reliable UDP socket cleanup

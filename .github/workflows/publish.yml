@@ -20,7 +20,7 @@ jobs:
       - name: Setup .NET
         uses: actions/setup-dotnet@v4
         with:
-          dotnet-version: "10.0.x"
+          dotnet-version: "9.0.x"
 
       - name: Pack
         run: |
@@ -37,13 +37,13 @@ jobs:
           fi
           echo "VERSION=$VERSION" >> "$GITHUB_ENV"
 
-          cp BattleNET.Core/bin/Release/net10.0/BattleNET.Core.dll artifacts/libs/
-          cp BattleNET.Core/bin/Release/net10.0/BattleNET.Core.xml artifacts/libs/ || true
-          cp BattleNET.Core/bin/Release/net10.0/BattleNET.Core.pdb artifacts/libs/ || true
-          cp BattleNET.Commands/bin/Release/net10.0/BattleNET.Commands.dll artifacts/libs/
-          cp BattleNET.Commands/bin/Release/net10.0/BattleNET.Commands.xml artifacts/libs/ || true
-          cp BattleNET.Commands/bin/Release/net10.0/BattleNET.Commands.pdb artifacts/libs/ || true
-          (cd artifacts/libs && zip -r "../BattleNET.Libraries-${VERSION}-net10.0.zip" .)
+          cp BattleNET.Core/bin/Release/net9.0/BattleNET.Core.dll artifacts/libs/
+          cp BattleNET.Core/bin/Release/net9.0/BattleNET.Core.xml artifacts/libs/ || true
+          cp BattleNET.Core/bin/Release/net9.0/BattleNET.Core.pdb artifacts/libs/ || true
+          cp BattleNET.Commands/bin/Release/net9.0/BattleNET.Commands.dll artifacts/libs/
+          cp BattleNET.Commands/bin/Release/net9.0/BattleNET.Commands.xml artifacts/libs/ || true
+          cp BattleNET.Commands/bin/Release/net9.0/BattleNET.Commands.pdb artifacts/libs/ || true
+          (cd artifacts/libs && zip -r "../BattleNET.Libraries-${VERSION}-net9.0.zip" .)
 
       - name: Publish CLI zip
         run: |
@@ -71,7 +71,7 @@ jobs:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           gh release upload "${{ github.event.release.tag_name }}" \
-            "artifacts/BattleNET.Libraries-${VERSION}-net10.0.zip" \
+            "artifacts/BattleNET.Libraries-${VERSION}-net9.0.zip" \
             "artifacts/BattleNET-${VERSION}-win-x64.zip" \
             artifacts/BattleNET.Core.*.nupkg \
             artifacts/BattleNET.Commands.*.nupkg \

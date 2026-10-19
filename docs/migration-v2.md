@@ -6,7 +6,7 @@ v2 is a **breaking rewrite**. There is no compatibility shim.
 
 | 1.3.x | 2.0 |
 |-------|-----|
-| Single `BattleNET` (netstandard2.0) | `BattleNET.Core` + `BattleNET.Commands` (net10.0) |
+| Single `BattleNET` (netstandard2.0) | `BattleNET.Core` + `BattleNET.Commands` (net9.0) |
 | `BattleNET client` (.NET Framework 4.6.1) | `BattleNET.Cli` |
 
 ```bash

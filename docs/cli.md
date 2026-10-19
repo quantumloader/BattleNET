@@ -13,7 +13,7 @@ dotnet tool install -g BattleNET.Cli
 # or run from source
 dotnet run --project BattleNET.Cli -- [options]
 
-# or unzip BattleNET-*-win-x64.zip from GitHub Releases (.NET 10 runtime required)
+# or unzip BattleNET-*-win-x64.zip from GitHub Releases (.NET 9 runtime required)
 ```
 
 ## Options

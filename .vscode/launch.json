@@ -6,7 +6,7 @@
       "type": "coreclr",
       "request": "launch",
       "preLaunchTask": "build",
-      "program": "${workspaceFolder}/BattleNET.Cli/bin/Debug/net10.0/BattleNET.dll",
+      "program": "${workspaceFolder}/BattleNET.Cli/bin/Debug/net9.0/BattleNET.dll",
       "args": [],
       "cwd": "${workspaceFolder}/BattleNET.Cli",
       "console": "integratedTerminal"

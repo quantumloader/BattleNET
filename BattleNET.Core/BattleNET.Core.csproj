@@ -1,14 +1,14 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net10.0</TargetFramework>
+    <TargetFramework>net9.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <LangVersion>latest</LangVersion>
     <RootNamespace>BattleNET</RootNamespace>
     <AssemblyName>BattleNET.Core</AssemblyName>
     <PackageId>BattleNET.Core</PackageId>
-    <Version>2.0.0</Version>
+    <Version>2.0.1</Version>
     <Authors>quantumloader</Authors>
     <Company>quantumloader</Company>
     <Copyright>Copyright (C) 2026 quantumloader</Copyright>
@@ -22,7 +22,7 @@
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <NoWarn>$(NoWarn);1591</NoWarn>
     <PackageReadmeFile>README.md</PackageReadmeFile>
-    <PackageReleaseNotes>v2.0.0 — Breaking rewrite for .NET 10. Async API, IAsyncDisposable, reliable UDP cleanup.</PackageReleaseNotes>
+    <PackageReleaseNotes>v2.0.1 — Target net9.0 for Visual Studio 2022 (17.14) compatibility. v2.0.0 rewrite: async API, IAsyncDisposable, UDP cleanup.</PackageReleaseNotes>
   </PropertyGroup>
 
   <ItemGroup>

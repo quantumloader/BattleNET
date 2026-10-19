@@ -2,7 +2,8 @@
 
 ## Requirements
 
-- [.NET 10 SDK](https://dotnet.microsoft.com/download) (build) or [.NET 10 runtime](https://dotnet.microsoft.com/download/dotnet/10.0) (run published CLI)
+- [.NET 9 SDK](https://dotnet.microsoft.com/download) (build) or [.NET 9 runtime](https://dotnet.microsoft.com/download/dotnet/9.0) (run published CLI)
+- Visual Studio 2022 17.12+ (or `dotnet` CLI) — .NET 10 SDK needs VS 2026 / MSBuild 18
 - A DayZ / Arma server with BattlEye RCon enabled (`RConPort`, `RConPassword` in BE server config)
 
 ## Install packages
@@ -12,7 +13,7 @@ dotnet add package BattleNET.Core
 dotnet add package BattleNET.Commands
 ```
 
-Or reference the DLL zip from [Releases](https://github.com/quantumloader/BattleNET/releases): `BattleNET.Libraries-*-net10.0.zip`.
+Or reference the DLL zip from [Releases](https://github.com/quantumloader/BattleNET/releases): `BattleNET.Libraries-*-net9.0.zip`.
 
 ## Minimal example
 
